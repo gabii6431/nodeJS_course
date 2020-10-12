@@ -11,6 +11,9 @@ app.set('view engine', 'ejs');
 // Definir diretorio de views padrão para o projeto
 app.set('views', './app/views');
 
+// Incluindo todos os arquivos estáticos - css/images
+app.use(express.static('./app/public'));
+
 // Includindo o bodyParser
 app.use(bodyParser.urlencoded({extended: true}));
 
